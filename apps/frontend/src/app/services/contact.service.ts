@@ -21,4 +21,8 @@ export class ContactService {
     create(contact: ContactDto): Observable<ContactDto> {
         return this.http.post<ContactDto>(`${this.baseUrl}`, contact);
     }
+
+    update(contact: ContactDto): Observable<ContactDto> {
+        return this.http.put<ContactDto>(`${this.baseUrl}`, contact);
+    }
 } 

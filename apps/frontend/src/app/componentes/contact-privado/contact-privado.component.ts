@@ -10,35 +10,12 @@ export class ContactPrivadoComponent implements OnInit {
 
   contacts: ContactDto[] = [];
 
-  contact: ContactDto = {
-    name: '',
-    email: '',
-    message: '',
-  };
-
   constructor(private contactService: ContactService) { }
+  
   ngOnInit(): void {
-    this.contactService.getAll().subscribe((contact: ContactDto[]) => {
-      this.contacts = contact;
+    this.contactService.getAll().subscribe((contacts: ContactDto[]) => {
+      this.contacts = contacts;
     });
   }
-
-  create() {
-    if (!this.contact.name || !this.contact.email || !this.contact.message ) {
-      alert('Nombre, email y mensaje con campos requeridos ');
-      return;
-    }
-    this.contactService.create(this.contact).subscribe((contact: ContactDto) => {
-      this.contacts.push(contact);
-      this.contact = {
-        name: '',
-        email: '',
-        message: '',
-      }
-    })
-  }
 }
-
-
-
 

@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { ContactenosComponent } from './componentes/contactenos/contactenos.component';
 import { HeaderComponent } from './componentes/header/header.component';
+import { HeaderAdminComponent } from './componentes/header-admin/header-admin.component';
 import { HomeComponent } from './componentes/home/home.component';
 import { LoginComponent } from './componentes/login/login.component';
 import { MisionComponent } from './componentes/mision/mision.component';
@@ -23,9 +24,9 @@ import { ContactService } from './services/contact.service';
 
 @NgModule({
   declarations: [
-    
     AppComponent,
     HeaderComponent,
+    HeaderAdminComponent,
     FooterComponent,
     MisionComponent,
     VisionComponent,

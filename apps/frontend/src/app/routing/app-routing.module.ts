@@ -10,7 +10,6 @@ import { LoginComponent } from '../componentes/login/login.component';
 import { PaginaPrivadaComponent} from '../componentes/pagina-privada/pagina-privada.component';
 import { UsuarioPrivadoComponent} from '../componentes/usuario-privado/usuario-privado.component';
 import { ContactPrivadoComponent} from '../componentes/contact-privado/contact-privado.component';
-import { FooterComponent } from '../componentes/footer/footer.component';
 
 const routes: Routes = [
   {path: "",component:HomeComponent, pathMatch:'full'},
@@ -24,7 +23,6 @@ const routes: Routes = [
   {path: "usuario-privado",component:UsuarioPrivadoComponent, pathMatch:'full'},
   {path: "contact-privado",component:ContactPrivadoComponent, pathMatch:'full'},
   {path: "**",component:HomeComponent,pathMatch:'full'},
-  {path: "footer",component:FooterComponent, pathMatch:'full'},
 ];
 
 @NgModule({

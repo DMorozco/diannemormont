@@ -16,7 +16,7 @@ export class RegistroComponent {
     phone: ''
   };
 
-  account: AccountDto = {
+  newAccount: AccountDto = {
     email: '',
     password: '',
     role: 'USER'
@@ -33,15 +33,15 @@ export class RegistroComponent {
       return;
     }
     this.userService.create(this.newUser).subscribe(() => {
-      const account: AccountDto = {
+      const newAccount: AccountDto = {
         email: this.newUser.email,
         password: this.newUser.phone,
         role: 'USER'
       }
-      this.accountService.signup(account).subscribe((accountResponse: AccountResponse) => {
+      this.accountService.signup(newAccount).subscribe((accountResponse: AccountResponse) => {
         if(accountResponse.status == 201) {
           this.newUser = { name: '', lastname: '', email: '', phone: '' }
-          this.account = { email: '', password: '', role: 'USER' }
+          this.newAccount = { email: '', password: '', role: 'USER' }
           alert('El usuario fue creado satisfactoriamente');
         }
         else {
