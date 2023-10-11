@@ -2,7 +2,9 @@
   "name": "@diannemormont/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "~16.2.0",

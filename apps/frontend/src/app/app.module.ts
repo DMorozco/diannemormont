@@ -15,11 +15,15 @@ import { AppRoutingModule } from './routing/app-routing.module';
 import { AppComponent } from './routing/app.component';
 import { UserService } from './services/user.service';
 import { PaginaPrivadaComponent } from './componentes/pagina-privada/pagina-privada.component';
+import { UsuarioPrivadoComponent } from './componentes/usuario-privado/usuario-privado.component';
 import { AccountService } from './services/account.service';
 import { ProductService } from './services/product.service';
+import { ContactPrivadoComponent } from './componentes/contact-privado/contact-privado.component';
+import { ContactService } from './services/contact.service';
 
 @NgModule({
   declarations: [
+    
     AppComponent,
     HeaderComponent,
     FooterComponent,
@@ -30,7 +34,9 @@ import { ProductService } from './services/product.service';
     RegistroComponent,
     ProductComponent,
     LoginComponent,
-    PaginaPrivadaComponent
+    PaginaPrivadaComponent,
+    UsuarioPrivadoComponent,
+    ContactPrivadoComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +44,7 @@ import { ProductService } from './services/product.service';
     HttpClientModule,
     FormsModule
   ],
-  providers: [UserService, AccountService, ProductService],
+  providers: [UserService, AccountService, ProductService, ContactService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

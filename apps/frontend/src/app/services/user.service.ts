@@ -6,7 +6,7 @@ export interface UserDto {
     name: string;
     lastname: string
     email: string;
-    phone: string
+    phone: string;
 }
 
 @Injectable({ providedIn: 'root' })
@@ -20,12 +20,14 @@ export class UserService {
     }
 
     create(user: UserDto): Observable<UserDto> {
-        const result = this.http.post<UserDto>(`${this.baseUrl}`, user);
-        console.log(result);
-        return result;
+        return this.http.post<UserDto>(`${this.baseUrl}`, user);
     }
 
     delete(email: string): Observable<boolean> {
         return this.http.delete<boolean>(`${this.baseUrl}/?email=${email}`);
     }
-} 
+
+    update(user: UserDto): Observable<UserDto> {
+        return this.http.put<UserDto>(`${this.baseUrl}/?email=${user.email}`, user);
+    }
+}

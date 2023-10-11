@@ -34,7 +34,7 @@ export class LoginComponent {
           this.router.navigate(['/pagina-privada']);
         }
         else {
-          this.router.navigate(['/administrador']);
+          this.router.navigate(['/usuario-privado']);
         }
         
         this.account = {
